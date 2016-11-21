@@ -20,7 +20,6 @@
   .order-first
     order: -1
 
-
 // Columns
 .col-1
   max-width: 300px
@@ -51,4 +50,7 @@
   font-size: 36px
   line-height: 1
   font-family: 'Fira sans'
-  color: #3f3f42
+  &.outdented
+    text-indent: -0.75em
+    @media (max-width: 640px)
+      text-indent: 0
