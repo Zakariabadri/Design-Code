@@ -9,7 +9,5 @@ $(window).scroll(function(){
 
 function youtubeVidScroll(){
   var wScroll = $(window).scrollTop();
-  console.log(wScroll);
+  $('.video-strip').css('background-position', 'center -'+ wScroll +'px');
 };
-
-console.log("hello");
