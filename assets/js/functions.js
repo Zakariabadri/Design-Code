@@ -18,9 +18,20 @@ function mentoringBubbleClick(){
     if($(window).width() > 640){
       $(this).parent().css('top', vertMath);
     } else {
-      $(this).parent().css('left', horzMath);
+      if($(this).hasClass('back-btn')){
+
+        mentoringNarrowStart();
+
+      }else {
+        $(this).parent().css('left', horzMath);
+      }
     }
-    $(this).addClass('has-bubble-open').siblings().removeClass('has-bubble-open');
+    if(!$(this).hasClass('back-btn')){
+
+      $(this).addClass('has-bubble-open').siblings().removeClass('has-bubble-open');
+
+    }
+
   });
 
 
@@ -45,15 +56,20 @@ function startMentoring(){
   var wScroll = $(window).scrollTop(),
       sMentoring = $('section.mentoring').offset().top;
 
-  if( sMentoring - 500 < wScroll && $(window).width() > 640){
+  if( sMentoring - 500 < wScroll){
 
-    $('.faces').addClass('launched');
+    if ($(window).width() > 640) {
 
-    if(!$('.face').hasClass('has-bubble-open')){
-      setTimeout(function(){
-        $('.face:nth-child(3)').addClass('has-bubble-open');
-      }, 400);
+      $('.faces').addClass('launched');
 
+      if(!$('.face').hasClass('has-bubble-open')){
+        setTimeout(function(){
+          $('.face:nth-child(3)').addClass('has-bubble-open');
+        }, 400);
+
+      }
+    } else {
+      mentoringNarrowStart();
     }
 
   }
