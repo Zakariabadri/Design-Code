@@ -819,7 +819,8 @@ section.articles {
       -webkit-transform: scale(0.5);
               transform: scale(0.5); }
       section.articles .article-thumb .article-meta .name {
-        font-size: 18px; }
+        font-size: 18px;
+        line-height: 1.2; }
       section.articles .article-thumb .article-meta .date {
         font-style: italic; }
   section.articles .article-thumb:hover .article-meta {
@@ -831,6 +832,9 @@ section.articles {
   @media (max-width: 640px) {
     section.articles .desc-wrap {
       margin-top: 100px; } }
+  @media (max-width: 999px) and (min-width: 640px) {
+    section.articles .article-thumb {
+      width: 33.3%; } }
 
 .home-wrap {
   display: -ms-flexbox;
