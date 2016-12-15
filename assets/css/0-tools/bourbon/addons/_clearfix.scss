@@ -17,9 +17,15 @@
 ///   }
 
 @mixin clearfix {
+  zoom: 1;
+
+  &::before,
   &::after {
-    clear: both;
-    content: "";
-    display: table;
+      content: '';
+      display: table;
+  }
+
+  &::after {
+      clear: both;
   }
 }
