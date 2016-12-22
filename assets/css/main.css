@@ -882,6 +882,25 @@ section.articles {
     -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1); } }
 
+section.vine {
+  background-color: #00bf8f;
+  background-image: url("../img/vine-bg.jpg");
+  background-size: cover;
+  color: white; }
+  section.vine .home-cta {
+    color: #00bf8f; }
+  section.vine .description {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+
+@media (max-width: 640px) {
+  .col-1 {
+    text-align: center; }
+  .description {
+    margin-top: 50px; } }
+
 .home-wrap {
   display: -ms-flexbox;
   display: flex;
