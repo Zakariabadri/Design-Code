@@ -15,6 +15,7 @@ section.design
       image: url('/assets/img/design-bg.png')
       position: center
     padding: 50px 0
+    transition: background-color 200ms ease-in-out
 
     &.behance
       background-color: #1769ff
@@ -33,6 +34,9 @@ section.design
     border: 2px solid white
     box-sizing: border-box
     margin: 5px
+    transition: transform 150ms ease-in-out
+    &:hover
+      transform: scale(1.1)
 
 
     img

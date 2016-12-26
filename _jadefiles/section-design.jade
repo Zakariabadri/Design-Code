@@ -1,28 +1,28 @@
-mixin design-img(link, img)
-  a(href="#{link}").design-img-link
+mixin design-img(link, img, color)
+  a(href="#{link}" data-color="#{color}").design-img-link
     img(src="assets/img/design-img/#{img}")
 
 section.design
   .flex.flex--center
-    .col-50.flex.flex--center.dribbble
+    .col-50.flex.flex--center.dribbble(data-orig-color='#ea4c89')
       .col-1
         p.home-lead ...Updating Dribbble...
-        +design-img('https://dribble.com', 'drib-1.jpg')
-        +design-img('https://dribble.com', 'drib-2.jpg')
-        +design-img('https://dribble.com', 'drib-3.png')
-        +design-img('https://dribble.com', 'drib-4.jpg')
-        +design-img('https://dribble.com', 'drib-5.jpg')
-        +design-img('https://dribble.com', 'drib-6.jpg')
+        +design-img('https://dribble.com', 'drib-1.jpg', 'orange')
+        +design-img('https://dribble.com', 'drib-2.jpg', '#646560')
+        +design-img('https://dribble.com', 'drib-3.png', '#2DECBA')
+        +design-img('https://dribble.com', 'drib-4.jpg', '#971E27')
+        +design-img('https://dribble.com', 'drib-5.jpg', '#2C0000')
+        +design-img('https://dribble.com', 'drib-6.jpg', '#E0D4BF')
         .cf
         a(href="").home-cta See more on Dribble
-    .col-50.flex.flex--center.behance
+    .col-50.flex.flex--center.behance(data-orig-color='#1769ff')
       .col-1
         p.home-lead ...and Behance...
-        +design-img('https://dribble.com', 'be-1.png')
-        +design-img('https://dribble.com', 'be-2.jpg')
-        +design-img('https://dribble.com', 'be-3.jpg')
-        +design-img('https://dribble.com', 'be-4.jpg')
-        +design-img('https://dribble.com', 'be-5.jpg')
-        +design-img('https://dribble.com', 'be-6.png')
+        +design-img('https://dribble.com', 'be-1.png', '#656365')
+        +design-img('https://dribble.com', 'be-2.jpg', '#991F39')
+        +design-img('https://dribble.com', 'be-3.jpg', '#FDFBFD')
+        +design-img('https://dribble.com', 'be-4.jpg', '#F5947D')
+        +design-img('https://dribble.com', 'be-5.jpg', '#4F5B63')
+        +design-img('https://dribble.com', 'be-6.png', '#E79CC2')
         .cf
         a(href="").home-cta See more on Behance

@@ -3,10 +3,25 @@ $(function(){
   mentoringBubbleClick();
   articaleTada();
   setInterval(function(){articaleTada()}, 3000);
+  designBGStuff();
 
 
 });
 
+
+function designBGStuff(){
+
+  $('.design-img-link').hover(function(){
+
+    $(this).parent().parent().css('background-color', $(this).data('color'));
+
+  }, function(){
+
+    $(this).parent().parent().css('background-color', $(this).parent().parent().data('orig-color'));
+
+  });
+
+}
 
 function articaleTada(){
 

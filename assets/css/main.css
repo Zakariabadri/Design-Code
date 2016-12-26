@@ -913,7 +913,8 @@ section.design {
     background-color: #ea4c89;
     background-image: url("/assets/img/design-bg.png");
     background-position: center;
-    padding: 50px 0; }
+    padding: 50px 0;
+    transition: background-color 200ms ease-in-out; }
     section.design .dribbble.behance, section.design .behance.behance {
       background-color: #1769ff; }
       section.design .dribbble.behance .home-cta, section.design .behance.behance .home-cta {
@@ -928,7 +929,12 @@ section.design {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
     border: 2px solid white;
     box-sizing: border-box;
-    margin: 5px; }
+    margin: 5px;
+    transition: -webkit-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out; }
+    section.design .design-img-link:hover {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
     section.design .design-img-link img {
       width: 100%;
       display: block; }
